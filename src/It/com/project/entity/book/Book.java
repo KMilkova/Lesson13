@@ -104,4 +104,28 @@ public class Book {
 		return "id=" + id + ", name=" + name + ", authors=" + aut + " publishingHouse = " + publishingHouse
 				+ ", year=" + year + ", count=" + count + ", price=" + price + ", bindingType=" + bindingType;
 	}
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + Arrays.hashCode(authors);
+		result = prime * result + Objects.hash(bindingType, count, id, name, price, publishingHouse, year);
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Book other = (Book) obj;
+		return Arrays.equals(authors, other.authors) && Objects.equals(bindingType, other.bindingType)
+				&& count == other.count && id == other.id && Objects.equals(name, other.name) && price == other.price
+				&& Objects.equals(publishingHouse, other.publishingHouse) && year == other.year;
+	}
+
 }
