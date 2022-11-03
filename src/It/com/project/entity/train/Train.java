@@ -1,6 +1,6 @@
 package It.com.project.entity.train;
 
-import java.sql.Time;
+import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -9,13 +9,13 @@ public class Train {
 
 	private String pointOfDeparture;
 	private int trainNumber;
-	private String time;
+	private Date time;
 
 	public Train() {
 		super();
 	}
 
-	public Train(String pointOfDeparture, int trainNumber, String time) {
+	public Train(String pointOfDeparture, int trainNumber, Date time) {
 		this.pointOfDeparture = pointOfDeparture;
 		this.trainNumber = trainNumber;
 		this.time = time;
@@ -37,11 +37,11 @@ public class Train {
 		this.trainNumber = trainNumber;
 	}
 
-	public String getTime() {
+	public Date getTime() {
 		return time;
 	}
 
-	public void setTime(String time) {
+	public void setTime(Date time) {
 		this.time = time;
 	}
 	
@@ -56,8 +56,8 @@ public class Train {
 
 	@Override
 	public String toString() {
-		return String.format("Point of departure: %s, train number: %d, departure time: %s", pointOfDeparture,
-				trainNumber, time);
+		SimpleDateFormat f = new SimpleDateFormat("HH:mm");
+		return "Train [pointOfDeparture=" + pointOfDeparture + ", trainNumber=" + trainNumber + ", time=" + f.format(time) + "]";
 	}
 
 	@Override
