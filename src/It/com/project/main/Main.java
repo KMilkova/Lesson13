@@ -9,10 +9,10 @@ public class Main_train {
 
 	public static void main(String[] args) {
 		Depo depo = new Depo();
-		depo.add(new Train("Minsk", 251, "12:00"));
-		depo.add(new Train("Minsk", 200, "11:20"));
-		depo.add(new Train("Wroclaw", 51, "02:10"));
-		depo.add(new Train("Riga", 77, "15:00"));
+		depo.add(new Train("Minsk", 251, new Date(2022-1900, 1, 1, 15, 56)));
+		depo.add(new Train("Minsk", 200, new Date(2022-1900,1,22,22,1)));
+		depo.add(new Train("Wroclaw", 51, new Date(2022-1900, 1, 1, 15, 56)));
+		depo.add(new Train("Riga", 77, new Date(2022-1900,1,22,22,1)));
 
 		int trainNumber = 251;
 		for (Train tr : depo.getTrains()) {
