@@ -1,4 +1,4 @@
-package It.com.project.entity;
+package It.com.project.entity.train;
 
 import java.util.ArrayList;
 import java.util.Collections;
