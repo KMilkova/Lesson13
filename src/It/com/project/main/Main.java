@@ -27,7 +27,7 @@ public class Main_train {
 		depo.sortByPointOfDeparture();
 		depo.printTrains();
 
-		depo.sortByPointOfDeparture();
+		depo.sortByTrainNumber();
 		depo.printTrains();
 
 	}
